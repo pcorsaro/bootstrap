@@ -14,6 +14,46 @@ Clone the repo, `git clone git://github.com/twitter/bootstrap.git`, or [download
 
 
 
+<<<<<<< HEAD
+Versioning
+----------
+
+For transparency and insight into our release cycle, and for striving to maintain backward compatibility, Bootstrap will be maintained under the Semantic Versioning guidelines as much as possible.
+
+Releases will be numbered with the following format:
+
+`<major>.<minor>.<patch>`
+=======
+SASS: Usage
+-----------
+
+You can use the SASS Twitter Bootstrap by dropping the compiled CSS into any new project and start cranking.
+
+Because SASS always outputs standard css, just link to the final output like normal:
+
+`<link rel="stylesheet" type="text/css" href="bootstrap-2.1.1.css">`
+>>>>>>> bootstrap-sass/master
+
+And constructed with the following guidelines:
+
+* Breaking backward compatibility bumps the major (and resets the minor and patch)
+* New additions without breaking backward compatibility bumps the minor (and resets the patch)
+* Bug fixes and misc changes bumps the patch
+
+<<<<<<< HEAD
+=======
+
+SASS: Basic modification
+------------------------
+
+You can learn more about SASS at:
+
+[sass-lang.com](http://sass-lang.com)
+
+SASS runs as a local GEM on your system. You can run `sass --watch lib/bootstrap.scss:bootstrap-2.1.1.css`
+
+
+
 Versioning
 ----------
 
@@ -29,6 +69,7 @@ And constructed with the following guidelines:
 * New additions without breaking backward compatibility bumps the minor (and resets the patch)
 * Bug fixes and misc changes bumps the patch
 
+>>>>>>> bootstrap-sass/master
 For more information on SemVer, please visit http://semver.org/.
 
 
@@ -76,10 +117,28 @@ Channel: ##twitter-bootstrap (the double ## is not a typo)
 
 
 
+<<<<<<< HEAD
+=======
+SASS: Developers
+----------------
+
+We have included a Rakefile with convenience methods for working with the SASS Bootstrap library.
+
++ **build** - `rake build`
+This will run the less compiler on the bootstrap lib and regenerate the docs dir.
+The lessc compiler is required for this command to run.
+
++ **watch** - `rake watch`
+This is a convenience method for watching your Sass files and automatically building them whenever you save.
+
+
+
+>>>>>>> bootstrap-sass/master
 Developers
 ----------
 
 We have included a makefile with convenience methods for working with the Bootstrap library.
+<<<<<<< HEAD
 
 + **dependencies**
 Our makefile depends on you having recess, connect, uglify.js, and jshint installed. To install, just run the following command in npm:
@@ -88,11 +147,25 @@ Our makefile depends on you having recess, connect, uglify.js, and jshint instal
 $ npm install recess connect uglify-js jshint -g
 ```
 
+=======
+
++ **dependencies**
+Our makefile depends on you having recess, connect, uglify.js, and jshint installed. To install, just run the following command in npm:
+
+```
+$ npm install recess connect uglify-js jshint -g
+```
+
+>>>>>>> bootstrap-sass/master
 + **build** - `make`
 Runs the recess compiler to rebuild the `/less` files and compiles the docs pages. Requires recess and uglify-js. <a href="http://twitter.github.com/bootstrap/less.html#compiling">Read more in our docs &raquo;</a>
 
 + **test** - `make test`
+<<<<<<< HEAD
 Runs jshint and qunit tests headlessly in [phantomjs](http://code.google.com/p/phantomjs/) (used for ci). Depends on having phantomjs installed.
+=======
+Runs jshint and qunit tests headlessly in [phantomjs] (http://code.google.com/p/phantomjs/) (used for ci). Depends on having phantomjs installed.
+>>>>>>> bootstrap-sass/master
 
 + **watch** - `make watch`
 This is a convenience method for watching just Less files and automatically building them whenever you save. Requires the Watchr gem.
@@ -103,9 +176,15 @@ Contributing
 ------------
 
 Please submit all pull requests against *-wip branches. If your unit test contains javascript patches or features, you must include relevant unit tests. Thanks!
+<<<<<<< HEAD
 
 
 
+=======
+
+
+
+>>>>>>> bootstrap-sass/master
 Authors
 -------
 
@@ -121,6 +200,56 @@ Authors
 
 
 
+<<<<<<< HEAD
+=======
+Sass Conversion
+---------------
+
+The Twitter Bootstrap was lovingly converted to Sass by:
+
+**John W. Long**
+
++ http://twitter.com/johnwlong
++ http://github.com/jlong
+
+**Jeremy Hinegardner**
+
++ http://twitter.com/copiousfreetime
++ http://github.com/copiousfreetime
+
+**m5o**
+
++ http://twitter.com/m5o
++ http://github.com/m5o
+
+**smt**
+
++ http://twitter.com/tudorstudio
++ http://github.com/smt
+
+And [others](https://github.com/jlong/sass-twitter-bootstrap/contributors)
+
+
+
+Sass Conversion Quick Tips
+--------------------------
+
+* replace @ with $
+* replace . with @include for mixins
+* replace `spin` with `adjust-hue`
+* add !default to variable definitions
+* replace #gradient > .vertical with @include gradient-vertical
+* replace #grid > .style with @include grid-style
+* use grid-core and grid-fluid mixins instead of #grid > .core and #grid > .fluid
+* use font-shorthand instead of #font > .shorthand
+* replace fadein with fade-in
+* move @import for reset below mixins, because it uses tab-focus mixin in bootstrap.scss
+* explicitly provide .clearfix, .hide-text and .input-block-level for compatibility with LESS output
+* pass grid-* mixin arguments to generators, because otherwise the generator mixins will use the default variables pull transition definition into variable
+
+
+
+>>>>>>> bootstrap-sass/master
 Copyright and license
 ---------------------
 

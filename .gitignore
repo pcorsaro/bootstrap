@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Numerous always-ignore extensions
 *.diff
 *.err
@@ -35,3 +36,9 @@ nbproject
 .idea
 node_modules
 dist
+=======
+.DS_Store
+lib/.sass-cache/*
+.sass-cache/*
+.rvmrc
+>>>>>>> bootstrap-sass/master
