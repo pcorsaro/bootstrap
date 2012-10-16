@@ -45,10 +45,11 @@ $linkColorHover:        darken($linkColor, 15%) !default;
 // Typography
 // -------------------------
 $sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$oswaldFontFamily:      Oswald, Helvetica, Arial, sans-serif !default;
 $serifFontFamily:       Georgia, "Times New Roman", Times, serif !default;
 $monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !default;
 
-$baseFontSize:          14px !default;
+$baseFontSize:          13px !default;
 $baseFontFamily:        $sansFontFamily !default;
 $baseLineHeight:        20px !default;
 $altFontFamily:         $serifFontFamily !default;
@@ -56,6 +57,18 @@ $altFontFamily:         $serifFontFamily !default;
 $headingsFontFamily:    inherit !default; // empty to use BS default, $baseFontFamily
 $headingsFontWeight:    bold !default;    // instead of browser default, bold
 $headingsColor:         inherit !default; // empty to use BS default, $textColor
+// $sansFontFamily:        "News Cycle", "Arial Narrow Bold", sans-serif;
+// $serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+// $monoFontFamily:        Menlo, Monaco, Consolas, "Courier New", monospace;
+
+// $baseFontSize:          14px;
+// $baseFontFamily:        $serifFontFamily;
+// $baseLineHeight:        20px;
+// $altFontFamily:         $sansFontFamily;
+
+// $headingsFontFamily:    $sansFontFamily; // empty to use BS default, @baseFontFamily
+// $headingsFontWeight:    bold;    // instead of browser default, bold
+// $headingsColor:         $black; // empty to use BS default, @textColor
 
 // Tables
 // -------------------------
