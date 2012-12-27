@@ -44,32 +44,50 @@ $linkColorHover:        darken($linkColor, 15%) !default;
 
 // Typography
 // -------------------------
-// $sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-// $serifFontFamily:       Georgia, "Times New Roman", Times, serif !default;
-// $monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !default;
-
-// $baseFontSize:          13px !default;
-// $baseFontFamily:        $sansFontFamily !default;
-// $baseLineHeight:        20px !default;
-// $altFontFamily:         $serifFontFamily !default;
-
-// $headingsFontFamily:    inherit !default; // empty to use BS default, $baseFontFamily
-// $headingsFontWeight:    bold !default;    // instead of browser default, bold
-// $headingsColor:         inherit !default; // empty to use BS default, $textColor
-
-$sansFontFamily:        "Open Sans 400", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$headerFontFamily:      "Open Sans 300", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $serifFontFamily:       Georgia, "Times New Roman", Times, serif !default;
 $monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !default;
 
-$baseFontSize:          12px !default;
+$baseFontSize:          13px !default;
 $baseFontFamily:        $sansFontFamily !default;
 $baseLineHeight:        20px !default;
 $altFontFamily:         $serifFontFamily !default;
 
-$headingsFontFamily:    $headerFontFamily !default; // empty to use BS default, $baseFontFamily
-$headingsFontWeight:    inherit !default;    // instead of browser default, bold
+$headingsFontFamily:    inherit !default; // empty to use BS default, $baseFontFamily
+$headingsFontWeight:    bold !default;    // instead of browser default, bold
 $headingsColor:         inherit !default; // empty to use BS default, $textColor
+
+// $sansFontFamily:        "Open Sans 400", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+// $headerFontFamily:      "Open Sans 300", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+// $serifFontFamily:       Georgia, "Times New Roman", Times, serif !default;
+// $monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !default;
+
+// $baseFontSize:          12px !default;
+// $baseFontFamily:        $sansFontFamily !default;
+// $baseLineHeight:        20px !default;
+// $altFontFamily:         $serifFontFamily !default;
+
+// $headingsFontFamily:    $headerFontFamily !default; // empty to use BS default, $baseFontFamily
+// $headingsFontWeight:    inherit !default;    // instead of browser default, bold
+// $headingsColor:         inherit !default; // empty to use BS default, $textColor
+
+
+// Component sizing
+// -------------------------
+// Based on 14px font-size and 20px line-height
+
+$fontSizeLarge:         $baseFontSize * 1.25; // ~18px
+$fontSizeSmall:         $baseFontSize * 0.85; // ~12px
+$fontSizeMini:          $baseFontSize * 0.75; // ~11px
+
+$paddingLarge:          11px 19px; // 44px
+$paddingSmall:          2px 10px;  // 26px
+$paddingMini:           1px 6px;   // 24px
+
+$baseBorderRadius:      4px;
+$borderRadiusLarge:     6px;
+$borderRadiusSmall:     3px;
+
 
 // Tables
 // -------------------------
@@ -107,9 +125,11 @@ $btnInverseBackgroundHighlight:     $grayDarker !default;
 // -------------------------
 $inputBackground:               $white !default;
 $inputBorder:                   #ccc !default;
-$inputBorderRadius:             3px !default;
+$inputBorderRadius:             $baseBorderRadius !default;
 $inputDisabledBackground:       $grayLighter !default;
 $formActionsBackground:         #f5f5f5 !default;
+$inputHeight:                   $baseLineHeight + 10px; // base line-height + 8px vertical padding + 2px top/bottom border
+
 
 // Dropdowns
 // -------------------------
@@ -129,6 +149,7 @@ $dropdownLinkBackgroundHover:   $dropdownLinkBackgroundActive !default;
 
 // COMPONENT VARIABLES
 // --------------------------------------------------
+
 
 // Z-index master list
 // -------------------------
@@ -171,6 +192,7 @@ $wellBackground:                  #f5f5f5 !default;
 // Navbar
 // -------------------------
 $navbarCollapseWidth:             979px !default;
+$navbarCollapseDesktopWidth:      $navbarCollapseWidth + 1;
 
 $navbarHeight:                    40px !default;
 $navbarBackgroundHighlight:       #ffffff !default;
@@ -182,7 +204,7 @@ $navbarLinkColor:                 #777 !default;
 $navbarLinkColorHover:            $grayDark !default;
 $navbarLinkColorActive:           $gray !default;
 $navbarLinkBackgroundHover:       transparent !default;
-$navbarLinkBackgroundActive:      darken($navbarBackground, 5.25%) !default;
+$navbarLinkBackgroundActive:      darken($navbarBackground, 5%) !default;
 
 $navbarBrandColor:                $navbarLinkColor !default;
 
@@ -259,6 +281,7 @@ $popoverArrowOuterColor:  rgba(0,0,0,.25) !default;
 
 // GRID
 // --------------------------------------------------
+
 
 // Default 940px grid
 // -------------------------
