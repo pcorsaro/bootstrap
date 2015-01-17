@@ -11,7 +11,6 @@
   margin-bottom: $baseLineHeight;
   background-color: $warningBackground;
   border: 1px solid $warningBorder;
-  // @include border-radius($baseBorderRadius);
   color: $warningText;
 }
 .alert h4 {
