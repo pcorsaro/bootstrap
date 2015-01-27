@@ -33,7 +33,11 @@
 
 .media-left,
 .media > .pull-left {
-  padding-right: 10px;
+  margin-right: 10px;
+}
+
+.media .pull-left {
+  margin-right: 10px;
 }
 
 .media-left,
