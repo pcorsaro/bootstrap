@@ -97,8 +97,8 @@ $tableBorder:                       #ddd !default; // table and cell border
 
 // Buttons
 // -------------------------
-$btnBackground:                     $white !default;
-$btnBackgroundHighlight:            darken($white, 10%) !default;
+$btnBackground:                     #e9e9e9 !default;
+$btnBackgroundHighlight:            darken(#e9e9e9, 20%) !default;
 $btnBorder:                         #bbb !default;
 
 $btnPrimaryBackground:              $linkColor !default;
