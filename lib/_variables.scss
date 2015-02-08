@@ -32,8 +32,11 @@ $purple:                #7a43b6 !default;
 
 // Scaffolding
 // -------------------------
-$bodyBackground:        $white !default;
-$textColor:             $grayDark !default;
+// $bodyBackground:        $white !default;
+$bodyBackground:        #f8f8f8 !default;
+// $textColor:             $grayDark !default;
+$textColor:             rgb(64, 64, 64) !default;
+
 
 
 // Links
@@ -58,12 +61,12 @@ $linkColorHover:        darken($linkColor, 15%) !default;
 // $headingsColor:         inherit !default; // empty to use BS default, $textColor
 
 $sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$serifFontFamily:       Georgia, "Times New Roman", Times, serif !default;
+$serifFontFamily:       "Merriweather", Georgia, serif !default;
 $monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !default;
 
-$baseFontSize:          13px !default;
+$baseFontSize:          14px !default;
 $baseFontFamily:        $sansFontFamily !default;
-$baseLineHeight:        20px !default;
+$baseLineHeight:        $baseFontSize * 1.5 !default;
 $altFontFamily:         $serifFontFamily !default;
 
 $headingsFontFamily:    inherit !default; // empty to use BS default, $baseFontFamily
