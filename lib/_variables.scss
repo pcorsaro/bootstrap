@@ -32,8 +32,8 @@ $purple:                #7a43b6 !default;
 
 // Scaffolding
 // -------------------------
-// $bodyBackground:        $white !default;
-$bodyBackground:        #f8f8f8 !default;
+$bodyBackground:        $white !default;
+// $bodyBackground:        #f8f8f8 !default;
 // $textColor:             $grayDark !default;
 $textColor:             rgb(64, 64, 64) !default;
 
@@ -60,7 +60,8 @@ $linkColorHover:        darken($linkColor, 15%) !default;
 // $headingsFontWeight:    bold !default;    // instead of browser default, bold
 // $headingsColor:         inherit !default; // empty to use BS default, $textColor
 
-$sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+// $sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$sansFontFamily:        "Open Sans", Helvetica, Arial, sans-serif !default;
 $serifFontFamily:       "Merriweather", Georgia, serif !default;
 $monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !default;
 
@@ -69,7 +70,8 @@ $baseFontFamily:        $sansFontFamily !default;
 $baseLineHeight:        $baseFontSize * 1.5 !default;
 $altFontFamily:         $serifFontFamily !default;
 
-$headingsFontFamily:    inherit !default; // empty to use BS default, $baseFontFamily
+// $headingsFontFamily:    inherit !default; // empty to use BS default, $baseFontFamily
+$headingsFontFamily:    'Roboto Slab', Georgia, serif; // empty to use BS default, $baseFontFamily
 $headingsFontWeight:    bold !default;    // instead of browser default, bold
 $headingsColor:         inherit !default; // empty to use BS default, $textColor
 
