@@ -33,7 +33,10 @@ $purple:                #7a43b6 !default;
 // Scaffolding
 // -------------------------
 $bodyBackground:        $white !default;
-$textColor:             $grayDark !default;
+// $bodyBackground:        #f8f8f8 !default;
+// $textColor:             $grayDark !default;
+$textColor:             rgb(64, 64, 64) !default;
+
 
 
 // Links
@@ -44,30 +47,31 @@ $linkColorHover:        darken($linkColor, 15%) !default;
 
 // Typography
 // -------------------------
-// $sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-// $serifFontFamily:       Georgia, "Times New Roman", Times, serif !default;
-// $monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !default;
+$sansFontFamily:        Helvetica, Arial, sans-serif !default;
+$serifFontFamily:       Georgia, "Times New Roman", Times, serif !default;
+$monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !default;
 
 // $baseFontSize:          13px !default;
 // $baseFontFamily:        $sansFontFamily !default;
 // $baseLineHeight:        20px !default;
 // $altFontFamily:         $serifFontFamily !default;
 
-// $headingsFontFamily:    inherit !default; // empty to use BS default, $baseFontFamily
-// $headingsFontWeight:    bold !default;    // instead of browser default, bold
-// $headingsColor:         inherit !default; // empty to use BS default, $textColor
-
-$sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$serifFontFamily:       Georgia, "Times New Roman", Times, serif !default;
-$monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !default;
-
-$baseFontSize:          13px !default;
-$baseFontFamily:        $sansFontFamily !default;
-$baseLineHeight:        20px !default;
-$altFontFamily:         $serifFontFamily !default;
-
 $headingsFontFamily:    inherit !default; // empty to use BS default, $baseFontFamily
 $headingsFontWeight:    bold !default;    // instead of browser default, bold
+$headingsColor:         inherit !default; // empty to use BS default, $textColor
+
+$sansFontFamily:        "Open Sans", Helvetica, Arial, sans-serif !default;
+$serifFontFamily:       "Merriweather", Georgia, serif !default;
+$monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !default;
+
+$baseFontSize:          14px !default;
+$baseFontFamily:        $sansFontFamily !default;
+$baseLineHeight:        $baseFontSize * 1.5 !default;
+$altFontFamily:         $serifFontFamily !default;
+
+// $headingsFontFamily:    "Roboto Slab", Georgia, serif !default; // empty to use BS default, $baseFontFamily
+// $headingsFontFamily:    "Merriweather", Georgia, serif !default; // empty to use BS default, $baseFontFamily
+// $headingsFontWeight:    bold !default;    // instead of browser default, bold
 $headingsColor:         inherit !default; // empty to use BS default, $textColor
 
 
@@ -154,12 +158,12 @@ $dropdownLinkBackgroundHover:   $dropdownLinkBackgroundActive !default;
 // -------------------------
 // Used for a bird's eye view of components dependent on the z-axis
 // Try to avoid customizing these :)
-$zindexDropdown:          1000 !default;
-$zindexPopover:           1010 !default;
-$zindexTooltip:           1030 !default;
-$zindexFixedNavbar:       1030 !default;
-$zindexModalBackdrop:     1040 !default;
-$zindexModal:             1050 !default;
+$zindexDropdown:          1100 !default;
+$zindexPopover:           1110 !default;
+$zindexTooltip:           1130 !default;
+$zindexFixedNavbar:       1130 !default;
+$zindexModalBackdrop:     1140 !default;
+$zindexModal:             1150 !default;
 
 
 // Sprite icons path
