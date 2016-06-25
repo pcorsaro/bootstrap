@@ -1,272 +1,129 @@
-[Twitter Bootstrap](http://twitter.github.com/bootstrap) [![Build Status](https://secure.travis-ci.org/twitter/bootstrap.png)](http://travis-ci.org/twitter/bootstrap)
-=================
+# Bootstrap for Sass
 
-Bootstrap is a sleek, intuitive, and powerful front-end framework for faster and easier web development, created and maintained by [Mark Otto](http://twitter.com/mdo) and [Jacob Thornton](http://twitter.com/fat).
+[![Build Status](https://secure.travis-ci.org/thomas-mcdonald/bootstrap-sass.png?branch=master)](http://travis-ci.org/thomas-mcdonald/bootstrap-sass) [![Code Climate](https://codeclimate.com/github/thomas-mcdonald/bootstrap-sass.png)](https://codeclimate.com/github/thomas-mcdonald/bootstrap-sass)
 
-To get started, checkout http://getbootstrap.com!
+`bootstrap-sass` is an Sass-powered version of [Bootstrap](http://github.com/twbs/bootstrap), ready to drop right into your Sass powered applications.
 
+Enjoy.
 
+## Usage
 
-Quick start
------------
+### Rails
 
-Clone the repo, `git clone git://github.com/twitter/bootstrap.git`, [download the latest release](https://github.com/twitter/bootstrap/zipball/master), or install with twitter's [Bower](http://twitter.github.com/bower): `bower install bootstrap`.
+In your Gemfile:
 
-
-
-<<<<<<< HEAD
-Versioning
-----------
-
-For transparency and insight into our release cycle, and for striving to maintain backward compatibility, Bootstrap will be maintained under the Semantic Versioning guidelines as much as possible.
-
-Releases will be numbered with the following format:
-
-`<major>.<minor>.<patch>`
-=======
-SASS: Usage
------------
-
-You can use the SASS Twitter Bootstrap by dropping the compiled CSS into any new project and start cranking.
-
-Because SASS always outputs standard css, just link to the final output like normal:
-
-<<<<<<< HEAD
-`<link rel="stylesheet" type="text/css" href="bootstrap-2.1.1.css">`
->>>>>>> bootstrap-sass/master
-=======
-`<link rel="stylesheet" type="text/css" href="bootstrap-2.2.1.css">`
->>>>>>> bootstrap-sass/master
-
-And constructed with the following guidelines:
-
-* Breaking backward compatibility bumps the major (and resets the minor and patch)
-* New additions without breaking backward compatibility bumps the minor (and resets the patch)
-* Bug fixes and misc changes bumps the patch
-
-<<<<<<< HEAD
-=======
-
-SASS: Basic modification
-------------------------
-
-You can learn more about SASS at:
-
-[sass-lang.com](http://sass-lang.com)
-
-SASS runs as a local GEM on your system. You can run `sass --watch lib/bootstrap.scss:bootstrap-2.2.1.css`
-
-
-
-Versioning
-----------
-
-For transparency and insight into our release cycle, and for striving to maintain backward compatibility, Bootstrap will be maintained under the Semantic Versioning guidelines as much as possible.
-
-Releases will be numbered with the following format:
-
-`<major>.<minor>.<patch>`
-
-And constructed with the following guidelines:
-
-* Breaking backward compatibility bumps the major (and resets the minor and patch)
-* New additions without breaking backward compatibility bumps the minor (and resets the patch)
-* Bug fixes and misc changes bumps the patch
-
->>>>>>> bootstrap-sass/master
-For more information on SemVer, please visit http://semver.org/.
-
-
-
-Bug tracker
------------
-
-Have a bug? Please create an issue here on GitHub that conforms with [necolas's guidelines](https://github.com/necolas/issue-guidelines).
-
-https://github.com/twitter/bootstrap/issues
-
-
-
-Twitter account
----------------
-
-Keep up to date on announcements and more by following Bootstrap on Twitter, [@TwBootstrap](http://twitter.com/TwBootstrap).
-
-
-
-Blog
-----
-
-Read more detailed announcements, discussions, and more on [The Official Twitter Bootstrap Blog](http://blog.getbootstrap.com).
-
-
-
-Mailing list
-------------
-
-Have a question? Ask on our mailing list!
-
-twitter-bootstrap@googlegroups.com
-
-http://groups.google.com/group/twitter-bootstrap
-
-
-
-IRC
----
-
-Server: irc.freenode.net
-
-Channel: ##twitter-bootstrap (the double ## is not a typo)
-
-
-
-<<<<<<< HEAD
-=======
-SASS: Developers
-----------------
-
-We have included a Rakefile with convenience methods for working with the SASS Bootstrap library.
-
-+ **build** - `rake build`
-This will run the less compiler on the bootstrap lib and regenerate the docs dir.
-The lessc compiler is required for this command to run.
-
-+ **watch** - `rake watch`
-This is a convenience method for watching your Sass files and automatically building them whenever you save.
-
-
-
->>>>>>> bootstrap-sass/master
-Developers
-----------
-
-We have included a makefile with convenience methods for working with the Bootstrap library.
-<<<<<<< HEAD
-
-+ **dependencies**
-Our makefile depends on you having recess, connect, uglify.js, and jshint installed. To install, just run the following command in npm:
-
-```
-$ npm install recess connect uglify-js jshint -g
+```ruby
+gem 'sass-rails', '=> 3.2'
+gem 'bootstrap-sass', '~> 2.3.2.2'
 ```
 
-=======
+`bundle install` and restart your server to make the files available.
 
-+ **dependencies**
-Our makefile depends on you having recess, connect, uglify.js, and jshint installed. To install, just run the following command in npm:
+#### CSS
 
+Import Bootstrap in an SCSS file (for example, `application.css.scss`) to get all of Bootstrap's styles, mixins and variables! We recommend against using `//= require` directives, since none of your other stylesheets will be [able to use](https://github.com/thomas-mcdonald/bootstrap-sass/issues/79#issuecomment-4428595) the awesome mixins that Bootstrap has defined.
+
+```css
+@import "bootstrap";
 ```
-$ npm install recess connect uglify-js jshint -g
+
+#### Javascripts
+
+You can include the Bootstrap javascripts through two methods. In this case, Sprocket's `//= require` directives are useful, since there is no better alternative.
+
+We have a helper that includes all available javascripts:
+
+```js
+// Loads all Bootstrap javascripts
+//= require bootstrap
 ```
 
->>>>>>> bootstrap-sass/master
-+ **build** - `make`
-Runs the recess compiler to rebuild the `/less` files and compiles the docs pages. Requires recess and uglify-js. <a href="http://twitter.github.com/bootstrap/extend.html#compiling">Read more in our docs &raquo;</a>
+You can also load individual modules, provided you sort out any related dependencies.
 
-+ **test** - `make test`
-<<<<<<< HEAD
-Runs jshint and qunit tests headlessly in [phantomjs](http://code.google.com/p/phantomjs/) (used for ci). Depends on having phantomjs installed.
-=======
-Runs jshint and qunit tests headlessly in [phantomjs] (http://code.google.com/p/phantomjs/) (used for ci). Depends on having phantomjs installed.
->>>>>>> bootstrap-sass/master
+```js
+//= require bootstrap-scrollspy
+//= require bootstrap-modal
+//= require bootstrap-dropdown
+```
 
-+ **watch** - `make watch`
-This is a convenience method for watching just Less files and automatically building them whenever you save. Requires the Watchr gem.
+Simples.
 
+### Compass
 
+`bootstrap-sass` 2.0 now comes with support for Compass, meaning projects that don't use Rails can get in on the fun Bootstrap web.
 
-Contributing
-------------
+#### New project
 
-Please submit all pull requests against *-wip branches. If your unit test contains javascript patches or features, you must include relevant unit tests. Thanks!
-<<<<<<< HEAD
+Install the gem and create a new project using the gem.
 
+```console
+gem install bootstrap-sass
+compass create compass-test -r bootstrap-sass --using bootstrap
+```
 
+This will sort a few things out:
 
-=======
+* You'll get a starting `styles.scss` ready for your alterations
+* You'll get a compiled stylesheet compiled & ready to drop into your application
+* We'll also copy the Bootstrap javascripts & images into their respective folders for you, absolutely free of charge! How cool is that?
 
+#### Existing project
 
+Install the gem, add the require statement to the top of your configuration file, and install the extension.
 
->>>>>>> bootstrap-sass/master
-Authors
--------
+```console
+gem install bootstrap-sass
+```
 
-**Mark Otto**
+```ruby
+# In config.rb
+require 'bootstrap-sass'
+```
 
-+ http://twitter.com/mdo
-+ http://github.com/markdotto
+```console
+compass install bootstrap
+```
 
-**Jacob Thornton**
+You'll get the same benefits as those starting from scratch. Radical.
 
-+ http://twitter.com/fat
-+ http://github.com/fat
+## Configuration
+Need to configure a variable or two? Simply define the value of the variable you want to change *before* importing Bootstrap. Sass will respect your existing definition rather than overwriting it with the Bootstrap defaults. A list of customisable variables can be found in the [Bootstrap documentation](http://twbs.github.io/bootstrap/customize/#variables).
 
+```scss
+$btnPrimaryBackground: #f00;
+@import "bootstrap";
+```
 
+**Note**: It's important that the file you are importing is not named `bootstrap`, since this will cause an import loop. As a general rule, errors are something you should try to avoid.
 
-<<<<<<< HEAD
-=======
-Sass Conversion
----------------
+### Passing multiple values to mixins
 
-The Twitter Bootstrap was lovingly converted to Sass by:
+Some CSS3 properties take multiple values, such as `box-shadow` or `text-shadow`. To pass multiple values to the Bootstrap mixins, you must escape the values or else the Sass parser will choke on the commas. Here's how to escape the values in Sass:
 
-**John W. Long**
+```scss
+.selector {
+  @include box-shadow(#{0 2px 5px rgba(0,0,0,.25) inset, 0 -2px 5px rgba(0,0,0,.25) inset});
+}
+```
 
-+ http://twitter.com/johnwlong
-+ http://github.com/jlong
+### Responsive styling?
+As per the Bootstrap project we don't include the responsive styles by default. `@import "bootstrap-responsive";` to get them.
 
-**Jeremy Hinegardner**
+## Versioning
+Bootstrap [claims](https://github.com/twbs/bootstrap#versioning) to use SemVer, although this is for values of public API that don't seem to include selectively requiring CSS components (see breaking change 2.0.2 -> 2.0.3). Since many people using bootstrap-sass *do* selectively require CSS components and I consider it part of the public API we can't really follow SemVer without becoming wildly out of sync with the Bootstrap version number, which is confusing for everyone involved. Further releases to bootstrap-sass will therefore have version numbers of the form `2.x.y.z`, where `2.x.y` is the release of Bootstrap we should be compatible with, and `z` is the patch version.
 
-+ http://twitter.com/copiousfreetime
-+ http://github.com/copiousfreetime
+Basically this means you should expect to append a separate patch version to the bootstrap version, which allows our versioning to stay more honest about changes.
 
-**m5o**
+### Bundler?
 
-+ http://twitter.com/m5o
-+ http://github.com/m5o
+```ruby
+gem 'bootstrap-sass', '~> 2.3.2.2'
+```
 
-**smt**
+Don't use the standard `~> 2.x.y`. Your apps may break.
 
-+ http://twitter.com/tudorstudio
-+ http://github.com/smt
+## Who
+bootstrap-sass is a project by [Thomas McDonald](https://twitter.com/#!/thomasmcdonald_), with support from [other awesome people](https://github.com/thomas-mcdonald/bootstrap-sass/graphs/contributors).
 
-And [others](https://github.com/jlong/sass-twitter-bootstrap/contributors)
-
-
-
-Sass Conversion Quick Tips
---------------------------
-
-* replace @ with $
-* replace . with @include for mixins
-* replace `spin` with `adjust-hue`
-* add !default to variable definitions
-* replace #gradient > .vertical with @include gradient-vertical
-* replace #grid > .style with @include grid-style
-* use grid-core and grid-fluid mixins instead of #grid > .core and #grid > .fluid
-* use font-shorthand instead of #font > .shorthand
-* replace fadein with fade-in
-* move @import for reset below mixins, because it uses tab-focus mixin in bootstrap.scss
-* explicitly provide .clearfix, .hide-text and .input-block-level for compatibility with LESS output
-* pass grid-* mixin arguments to generators, because otherwise the generator mixins will use the default variables pull transition definition into variable
-
-
-
->>>>>>> bootstrap-sass/master
-Copyright and license
----------------------
-
-Copyright 2012 Twitter, Inc.
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this work except in compliance with the License.
-You may obtain a copy of the License in the LICENSE file, or at:
-
-   http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+## You're in good company
+bootstrap-sass is used to build some awesome projects, including [Diaspora](http://diasporaproject.org/), [rails_admin](https://github.com/sferik/rails_admin), Michael Hartl's [Rails Tutorial](http://railstutorial.org/), [gitlabhq](http://gitlabhq.com/) and [kandan](http://kandanapp.com/). Using bootstrap-sass? I'd love it if you let me know.
