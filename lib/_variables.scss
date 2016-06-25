@@ -47,18 +47,18 @@ $linkColorHover:        darken($linkColor, 15%) !default;
 
 // Typography
 // -------------------------
-// $sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-// $serifFontFamily:       Georgia, "Times New Roman", Times, serif !default;
-// $monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !default;
+$sansFontFamily:        Helvetica, Arial, sans-serif !default;
+$serifFontFamily:       Georgia, "Times New Roman", Times, serif !default;
+$monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !default;
 
 // $baseFontSize:          13px !default;
 // $baseFontFamily:        $sansFontFamily !default;
 // $baseLineHeight:        20px !default;
 // $altFontFamily:         $serifFontFamily !default;
 
-// $headingsFontFamily:    inherit !default; // empty to use BS default, $baseFontFamily
-// $headingsFontWeight:    bold !default;    // instead of browser default, bold
-// $headingsColor:         inherit !default; // empty to use BS default, $textColor
+$headingsFontFamily:    inherit !default; // empty to use BS default, $baseFontFamily
+$headingsFontWeight:    bold !default;    // instead of browser default, bold
+$headingsColor:         inherit !default; // empty to use BS default, $textColor
 
 $sansFontFamily:        "Open Sans", Helvetica, Arial, sans-serif !default;
 $serifFontFamily:       "Merriweather", Georgia, serif !default;
@@ -69,8 +69,9 @@ $baseFontFamily:        $sansFontFamily !default;
 $baseLineHeight:        $baseFontSize * 1.5 !default;
 $altFontFamily:         $serifFontFamily !default;
 
-$headingsFontFamily:    "Roboto Slab", Georgia, serif !default; // empty to use BS default, $baseFontFamily
-$headingsFontWeight:    bold !default;    // instead of browser default, bold
+// $headingsFontFamily:    "Roboto Slab", Georgia, serif !default; // empty to use BS default, $baseFontFamily
+// $headingsFontFamily:    "Merriweather", Georgia, serif !default; // empty to use BS default, $baseFontFamily
+// $headingsFontWeight:    bold !default;    // instead of browser default, bold
 $headingsColor:         inherit !default; // empty to use BS default, $textColor
 
 
