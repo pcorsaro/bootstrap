@@ -47,8 +47,8 @@ $linkColorHover:        darken($linkColor, 15%) !default;
 
 // Typography
 // -------------------------
-$sansFontFamily:        Helvetica, Arial, sans-serif !default;
-$serifFontFamily:       Georgia, "Times New Roman", Times, serif !default;
+// $sansFontFamily:        Helvetica, Arial, sans-serif !default;
+// $serifFontFamily:       Georgia, "Times New Roman", Times, serif !default;
 $monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !default;
 
 // $baseFontSize:          13px !default;
@@ -56,23 +56,18 @@ $monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !defau
 // $baseLineHeight:        20px !default;
 // $altFontFamily:         $serifFontFamily !default;
 
-$headingsFontFamily:    inherit !default; // empty to use BS default, $baseFontFamily
+$sansFontFamily:        "Roboto", Helvetica, Arial, sans-serif !default;
+$serifFontFamily:       "Roboto Slab", Georgia, serif !default;
+$monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !default;
+
+$headingsFontFamily:    $serifFontFamily !default; // empty to use BS default, $baseFontFamily
 $headingsFontWeight:    bold !default;    // instead of browser default, bold
 $headingsColor:         inherit !default; // empty to use BS default, $textColor
-
-$sansFontFamily:        "Open Sans", Helvetica, Arial, sans-serif !default;
-$serifFontFamily:       "Merriweather", Georgia, serif !default;
-$monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !default;
 
 $baseFontSize:          14px !default;
 $baseFontFamily:        $sansFontFamily !default;
 $baseLineHeight:        $baseFontSize * 1.5 !default;
 $altFontFamily:         $serifFontFamily !default;
-
-// $headingsFontFamily:    "Roboto Slab", Georgia, serif !default; // empty to use BS default, $baseFontFamily
-// $headingsFontFamily:    "Merriweather", Georgia, serif !default; // empty to use BS default, $baseFontFamily
-// $headingsFontWeight:    bold !default;    // instead of browser default, bold
-$headingsColor:         inherit !default; // empty to use BS default, $textColor
 
 
 // Component sizing
